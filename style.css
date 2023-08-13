@@ -1,0 +1,314 @@
+:root{
+    --primary-color: #ff6257;
+
+    --dark-stale-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+
+    --font-size-p: 16px;
+    --font-family: 'Roboto', sans-serif;
+}
+
+/* Globales */
+button{
+    width: 100%;
+    height: 5rem;
+    border-radius: .8rem;
+    background-color: var(--dark-stale-grey);
+    border: none;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+button:hover{
+    cursor: pointer;
+    background: var(--primary-color);
+    background: linear-gradient(270deg, rgba(255,98,87,1) 33%, rgba(255,0,110,0.8) 100%);
+    -webkit-box-shadow: 0 1.5rem 3rem .5rem rgba(255,98,87,0.45);
+    -moz-box-shadow: 0 1.5rem 3rem .5rem rgba(255,98,87,0.45);
+    box-shadow: 0 1.5rem 3rem .5rem rgba(255,98,87,0.45);
+}
+
+html{
+    /* 1rem = 10px */
+    font-size: 62.5%; 
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilos */
+body{
+    font-family: var(--font-family);
+    background-color: var(--charcoal-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130vh;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 3rem;
+    width: 90rem;
+    height: 55rem;
+    gap: 3rem;
+}
+
+.card .right{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    padding: 6rem 4rem;
+    align-items: center;
+    flex-direction: column;
+    color: var(--dark-stale-grey);
+
+}
+
+.card .right h1{
+    font-size: 5.9rem;
+    margin-bottom: 1.5rem;
+
+}
+
+.card .right p{
+    font-size: 1.6rem;
+}
+
+.card .right ul{
+    margin: 2rem 0;
+}
+
+.card .right ul li {
+    list-style: none;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.card .right .icon{
+    background-image: url(/assets/images/icon-list.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    position: relative;
+}
+
+.card .right form{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card .right form label{
+    width: 100%;
+    
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .right form label p{
+    font-size: 1.3rem;
+}
+
+.card .right form label .invalid-email{
+    color: var(--primary-color);
+    display: none;
+}
+
+.card .right form label .invalid-email.active{
+    display: block;
+}
+
+form input{
+    width: 100%;
+    height: 5rem;
+    border-radius: .8rem;
+    border: .1rem solid var(--grey);
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+form input:hover,
+form input:focus{
+    border: .1rem solid var(--dark-stale-grey);
+    cursor: pointer;
+    outline: none;
+}
+
+form input.active{
+    background-color: rgba(255, 98, 87, 0.2);
+    border: .1rem solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.card .left{
+    height: 90%;
+    width: 40%;
+    padding: 2rem 0;
+    margin-right: -1rem;
+    background-image: url(/assets/images/illustration-sign-up-desktop.svg);
+    border-radius: 2rem;
+}
+
+.hide{
+    display: none;
+}
+
+footer{
+    background-color: var(--white);
+    border-radius: 1.2rem;
+    padding: 1rem;
+    width: min(100%,60rem);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10rem;
+
+}
+
+footer p, a{
+    font-size: 1.4rem;
+    color: var(--dark-stale-grey);
+}
+
+footer p a{
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.card-2{
+    background-color: var(--white);
+    width: 40rem;
+    height: 40rem;
+    border-radius: 3rem;
+    padding: 4rem;
+}
+
+.card-2 .image{
+    width: 20%;
+    height: 5rem;
+    margin-bottom: 3rem;
+}
+
+.card-2 .image img{
+    width: 5rem;
+}
+
+.content h2{
+    font-size: 4rem;
+    color: var(--dark-stale-grey);
+    margin-bottom: 1rem;
+}
+
+.content p {
+    font-size: 1.4rem;
+    color: var(--dark-stale-grey);
+    margin-bottom: 3rem;
+}
+
+.content p span{
+    font-weight: 700;
+}
+
+.content button{
+    width: 100%;
+}
+
+@media (max-width: 768px){
+
+    body{
+        background-color: var(--white);
+    }
+
+    main{
+        width: 100%;
+        height: 100%;
+    }
+    .card{
+        width: 100%;
+        height: 100%;
+        flex-direction: column-reverse;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+        
+    }
+    .card .right{
+        width: 100%;
+        height: 50%;
+        padding: 1rem 2rem;
+        margin: 0;
+    }
+
+    .card .left{
+        width: 100%;
+        height: 50%;
+        background-image: url(/assets/images/illustration-sign-up-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 0 0 2rem 2rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    .card-2{
+        width: 90%;
+        height: 60%;
+    }
+
+    .card-2 .image{
+        margin-bottom: 7rem;
+    }
+
+    .card-2 .image img{
+        width: 7rem;
+    }
+
+    .content h2,
+    .content p {
+        margin-bottom: 5rem;
+        width: 80%;
+    }
+
+    .content button{
+        margin-top: 30rem
+
+    }
+
+}
+
+@media (max-width: 390px){
+
+    main{
+        gap: 16rem;
+    }
+
+    .card-2{
+        padding: 0;
+        margin-top: 8rem;
+    }
+}
+
